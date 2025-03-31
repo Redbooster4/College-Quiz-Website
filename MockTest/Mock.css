@@ -1,0 +1,75 @@
+body {
+    font-family:Arial, sans-serif;
+    background-color: #001d21;
+    background-image: radial-gradient(circle, #fb8569 1.1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: center;
+    color:#E0E0E0;
+    text-align:center;
+}
+.Maintitle{
+    font-size:5rem;
+    font-family:'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+
+}
+.container {
+    max-width:600px;
+    padding:20px;
+    border-radius:10px;
+    margin:50px auto;
+    border: 2px solid #fb8569;
+    background-color: #001d21;
+}
+.question {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fb8569;
+}
+.options {
+    text-align: left;
+}
+.options label {
+    display: block;
+    padding: 10px;
+    background: #333333;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #E0E0E0;
+}
+.options input {
+    display: none;
+}
+.options label:hover {
+    background: #444444;
+}
+.btn{
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 20px 10px;
+    font-size: 1.2em;
+    color: #fff;
+    background: #ff6f61;
+    position: relative;
+    z-index: 50;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover{
+    background: #ff3b2f;
+    transform: scale(1.1);
+}
+.timer {
+    font-size: 20px;
+    color: #FF3D00; 
+    font-weight: bold;
+}
+.result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #fb8569; 
+}

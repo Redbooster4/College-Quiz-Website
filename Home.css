@@ -1,0 +1,212 @@
+html,body{
+    overflow: auto;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    scroll-behavior: smooth;
+    position: relative;
+}
+canvas{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #001d21;
+}
+::-webkit-scrollbar {
+    width: 10px; 
+}
+::-webkit-scrollbar-track {
+    background: #001d21;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #fb8569;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff3b2f; 
+}
+[class]{
+    cursor: none;
+}
+header{
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: 0.5s;
+    animation: fadeInDown 1s ease-in-out;
+}
+.mainhead{
+    padding-left: 10px;
+    padding-top: 150px;
+    font-size: 10rem;
+    font-weight: bolder;
+    margin: 0;
+    text-align: left;
+    animation: fadeInDown 1s ease-in-out;
+    color:#fb8569;
+}
+.tagline{
+    padding-left: 15px;
+    display: block;
+    font-size: 2rem;
+    margin: 0;
+    text-align: left;
+    animation: fadeInDown 1s ease-in-out;
+}
+.tagline2{
+    display: block;
+    font-size: 2rem;
+    margin: auto;
+    text-align: left;
+    animation: fadeInDown 1s ease-in-out;
+}
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+nav{
+    margin: 20px 0;
+}
+nav a{
+    position: relative;
+    padding-left: 15px;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease-in-out;
+}
+nav a:hover{
+    color: #ff6f61;
+}
+nav a:hover::before{
+    content: "[ ";
+    left: -15px;
+    transform: scale(0);
+}
+nav a:hover::after{
+    content: " ]";
+    right: -15px;
+    transform: scale(0);
+}
+nav a:hover::before,
+nav a:hover::after{
+    opacity: 1;
+    transform: scale(1);
+}
+.container{
+    padding: 100px 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+.btn{
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 20px 10px;
+    font-size: 1.2em;
+    color: #fff;
+    background: #ff6f61;
+    position: relative;
+    z-index: 50;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+.btn:hover{
+    background: #ff3b2f;
+    transform: scale(1.1);
+}
+.hero{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.hero2{
+    height: 100vh;
+    margin-left: 75px;
+    margin-right: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: #fb8569 1px solid;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.5);
+}
+@keyframes fadeInDown{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.about-contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:15px;
+    padding: 75px;
+    background-color: #001d21;
+}
+.about, .contact,.partners {
+    height: 50vh;
+    width: 30%;
+    padding: 20px;
+    background-color: #001d21;
+    border-radius: 15px;
+    text-align: center;
+    border: #fb8569 3px solid;
+    border-radius: 25px;
+    color: #fb8569;;
+}
+.about:hover {
+    background-color: #fb8569;
+    color: #001d21;
+}
+.contact:hover {
+    background-color: #fb8569;
+    color: #001d21;
+}
+.partners:hover {
+    background-color: #fb8569;
+    color: #001d21;
+}
+@media (max-width: 768px) {
+    .about-contact-container {
+        flex-direction: column;
+    }
+    .about, .contact {
+        width: 100%;
+    }
+}

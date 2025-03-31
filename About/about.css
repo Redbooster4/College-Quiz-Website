@@ -1,0 +1,171 @@
+html,body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: #001d21;
+    background-image: radial-gradient(circle, #fb8569 1.1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px;
+    border: #fb8569 3px solid;
+    border-radius: 25px;
+}
+::-webkit-scrollbar {
+    width: 10px; 
+}
+::-webkit-scrollbar-track {
+    background: #001d21;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #fb8569;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff3b2f; 
+}
+[class]{
+    cursor: none;
+}
+header{
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: 0.5s;
+    animation: fadeInDown 1s ease-in-out;
+}
+.mainhead{
+    padding-left: 10px;
+    padding-top: 800px;
+    font-size: 10rem;
+    font-weight: bolder;
+    margin: 0;
+    text-align: left;
+    animation: fadeInDown 1s ease-in-out;
+    color:#fb8569;
+}
+.tagline{
+    padding-left: 15px;
+    padding-bottom: 100px;
+    display: block;
+    font-size: 2rem;
+    margin: 0;
+    text-align: left;
+    animation: fadeInDown 1s ease-in-out;
+}
+.tagline2{
+    display: block;
+    font-size: 2rem;
+    margin: auto;
+    text-align: left;
+    animation: fadeInDown 1s ease-in-out;
+}
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+nav{
+    margin: 20px 0;
+}
+nav a{
+    padding-left: 15px;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.8s;
+}
+nav a:hover{
+    color: #ff6f61;
+}
+nav a:hover::before{
+    content: "[ ";
+    left: -15px;
+    transform: scale(0);
+}
+nav a:hover::after{
+    content: " ]";
+    right: -15px;
+    transform: scale(0);
+}
+nav a :hover::before,nav a :hover::after{
+    opacity: 1;
+    transform: scale(1);
+}
+.container{
+    animation: fadeInUp 1s ease-in-out;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 1.5rem;
+    width: 75%;
+    margin: auto;
+}
+.hero{
+    padding-top: 100px;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+@keyframes fadeInDown{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 20px 10px;
+    font-size: 1.2em;
+    color: #fff;
+    background: #ff6f61;
+    position: relative;
+    z-index: 50;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover{
+    background: #ff3b2f;
+    transform: scale(1.1);
+}
